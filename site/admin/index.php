@@ -30,7 +30,7 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     <?php
         foreach (glob("../*.html") as $key) {
             if ($key == "../index.html") {
-                echo '<a href="'.$key.'">[Home Page]</a>';
+                echo '<a href="'.$key.'">[home page]</a>';
             } else {
                 echo '<a href="'.$key.'">'.explode(".", basename($key))[0].'</a>';
             }
