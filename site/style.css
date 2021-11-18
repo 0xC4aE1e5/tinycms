@@ -1,0 +1,7 @@
+#data {
+    visibility: hidden;
+}
+
+* {
+    font-family: monospace !important;
+}
