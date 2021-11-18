@@ -6,6 +6,6 @@
 
 2. Open the admin page. To do that, go to `/admin/`. The extra `/` is important, because the site doesn't work properly.
 
-3. Edit `index`. Just press `index`. You will get a WYSIWYG (essentially Microsoft Word) editor.
+3. Edit the home page. Just press `edit`. You will get a WYSIWYG (essentially Microsoft Word) editor.
 
-4. Publish! Just press `Publish`!
+4. Publish! Just press `publish & return`!
