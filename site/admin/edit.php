@@ -43,7 +43,7 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
         <input type="hidden" name="data" id="code">
         <input type="hidden" name="file" value="<?php echo $_GET["page"]; ?>">
         <br>
-        <input type="submit" value="Publish">
+        <input type="submit" value="publish & return">
     </form>
 </body>
 </html>

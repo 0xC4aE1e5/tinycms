@@ -25,11 +25,20 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 </head>
 <body>
     <h1>tinycms</h1>
-    <form action="edit.php" onsubmit="var elem = document.getElementById('p'); elem.value = `../${elem.value}.html`"><input type="text" name="page" placeholder="page name" id="p"><input type="submit" value="Create Page"></form>
+    <form action="edit.php" onsubmit="var elem = document.getElementById('p'); elem.value = `../${elem.value}.html`"><input type="text" name="page" placeholder="page name" id="p"><input type="submit" value="create page"></form>
     <br>
     <?php
         foreach (glob("../*.html") as $key) {
-            echo '<a href="edit.php?page='.$key.'">'.explode(".", basename($key))[0].'</a><br>';
+            if ($key == "../index.html") {
+                echo '<a href="'.$key.'">[Home Page]</a>';
+            } else {
+                echo '<a href="'.$key.'">'.explode(".", basename($key))[0].'</a>';
+            }
+            echo '&nbsp;<a href="edit.php?page='.$key.'">edit</a>';
+            if ($key != "../index.html") {
+                echo '&nbsp;<a href="delete.php?page='.$key.'">delete</a>';
+            }
+            echo "<br>";
         }
     ?>
 </body>

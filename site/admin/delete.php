@@ -14,7 +14,6 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 }
 ?>
 <?php
-    file_put_contents($_POST["file"], '<!DOCTYPE html><html><head><link rel="stylesheet" href="style.css"></head><body>'.$_POST["data"].'</body></html>');
-    header("X-Robots-Tag: noindex");
-    header("Refresh: 0; url=index.php");
+    unlink($_GET["page"]);
+    header("Refresh: 0; url=index.php")
 ?>
