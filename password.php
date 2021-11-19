@@ -1,0 +1,1 @@
+<?php die("st0p_hack1ng"); ?>root

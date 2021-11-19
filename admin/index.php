@@ -5,7 +5,7 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     echo 'Please sign in.';
     exit;
 } else {
-    if ($_SERVER["PHP_AUTH_PW"] . "\n" == file_get_contents("../../password")) {
+    if ($_SERVER["PHP_AUTH_PW"] == strip_tags(file_get_contents("../password.php"))) {
         false;
     } else {
         echo "Invalid login. Try clearing logins!";
