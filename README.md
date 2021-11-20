@@ -2,6 +2,7 @@
 ## Notes:
 - The default password is `root`. Do not enter a username.
 - Installation on InfinityFree works, but here is a [guide](https://forum.infinityfree.net/t/tinycms-infinityfree/54475) (title is mispelled, I know. It's forced.)
+- Updating is the same as install, but don't overwrite password and index.
 ## After install
 1. Change the password. You put the password in the file `password.php`. Note that it's unencrypted, but they can't see it. (all they get is a notice to stop hacking). Make sure the file has no line endings. Also, put it after the '?>'. No newlines, no spaces. (use `tr -d '\r\n'` to get rid of the newlines; the password can have spaces, though.)
 
