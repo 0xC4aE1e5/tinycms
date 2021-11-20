@@ -1,0 +1,8 @@
+* {
+    font-family: monospace !important;
+}
+
+a:visited, a {
+    color: gray !important;
+    text-decoration: none !important;
+}
