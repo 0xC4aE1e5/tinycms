@@ -1,7 +1,6 @@
 # tinycms
 ## Notes:
 - The default password is `root`. Do not enter a username.
-- Installation on InfinityFree works, but here is a [guide](https://forum.infinityfree.net/t/tinycms-infinityfree/54475) (title is mispelled, I know. It's forced.)
 - Updating is the same as install, but don't overwrite `password.php`, `index.html` (and if themed, `style.css`).
 - Themes are simple, just change `/style.css` and put whatever. When editing however, it looks unstyled. But it is styled.
 ## After install
