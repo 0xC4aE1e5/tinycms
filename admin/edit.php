@@ -34,7 +34,10 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     <h1>tinycms</h1>
     <form action="push.php" method="post" onsubmit="pusha();">
         <div class="editor">
-            <?php echo file_get_contents($_GET["page"]); ?>
+            <?php if(!file_exists($_GET["page"])){
+                file_put_contents($_GET["page"], "");
+            }
+            echo file_get_contents($_GET["page"]); ?>
         </div>
         <script defer>
             var editora = new Quill('div', {theme:"snow",modules:{toolbar:[ {header: '1'}, 'bold', 'italic', 'underline', 'strike','link', 'image', 'video', { 'list': 'ordered' }, { 'list': 'bullet'}, { 'color': [] }, { 'background': [] }]}});
