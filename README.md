@@ -3,6 +3,7 @@
 - The default password is `root`. Do not enter a username.
 - Updating is the same as install, but don't overwrite `password.php`, `index.html` (and if themed, `style.css`).
 - Themes are simple, just change `/style.css` and put whatever. When editing however, it looks unstyled. But it is styled.
+- When linking pages on your site, enter `PageName.html`
 ## After install
 1. Change the password. You put the password in the file `password.php`. Note that it's unencrypted, but they can't see it. (all they get is a notice to stop hacking). Make sure the file has no line endings. Also, put it after the '?>'. No newlines, no spaces. (use `tr -d '\r\n'` to get rid of the newlines; the password can have spaces, though.)
 
