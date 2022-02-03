@@ -15,6 +15,7 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,18 +31,37 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
     <meta name="robots" content="noindex">
 </head>
+
 <body>
     <h1>tinycms</h1>
     <form action="push.php" method="post" onsubmit="pusha();">
         <div class="editor">
-            <?php if(!file_exists($_GET["page"])){
+            <?php if (!file_exists($_GET["page"])) {
                 file_put_contents($_GET["page"], "");
             }
             echo file_get_contents($_GET["page"]); ?>
         </div>
         <script defer>
-            var editora = new Quill('div', {theme:"snow",modules:{toolbar:[ {header: '1'}, 'bold', 'italic', 'underline', 'strike','link', 'image', 'video', { 'list': 'ordered' }, { 'list': 'bullet'}, { 'color': [] }, { 'background': [] }]}});
-        function pusha(){document.querySelector("#code").value = editora.root.innerHTML}
+            var editora = new Quill('div', {
+                theme: "snow",
+                modules: {
+                    toolbar: [{
+                        header: ["1", "2", "3", "4"]
+                    }, 'bold', 'italic', 'underline', 'strike', 'link', 'image', 'video', {
+                        'list': 'ordered'
+                    }, {
+                        'list': 'bullet'
+                    }, {
+                        'color': []
+                    }, {
+                        'background': []
+                    }]
+                }
+            });
+
+            function pusha() {
+                document.querySelector("#code").value = editora.root.innerHTML
+            }
         </script>
         <input type="hidden" name="data" id="code">
         <input type="hidden" name="file" value="<?php echo $_GET["page"]; ?>">
@@ -49,4 +69,5 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
         <input type="submit" value="publish & return">
     </form>
 </body>
+
 </html>
