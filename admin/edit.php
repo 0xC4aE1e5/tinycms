@@ -46,7 +46,7 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
                 theme: "snow",
                 modules: {
                     toolbar: [{
-                        header: ["1", "2", "3", "4"]
+                        header: ["1", "2", "3", "4", false]
                     }, 'bold', 'italic', 'underline', 'strike', 'link', 'image', 'video', {
                         'list': 'ordered'
                     }, {
